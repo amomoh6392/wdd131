@@ -1,0 +1,135 @@
+:root{
+    --primary-color: #274702;
+    --secondary-color: #4a2506;
+    --accent1-color: #264653;
+    --accent2-color: #ffd54f;
+    --space-small: 10px;
+    --space-medium: 20px;
+    --space-large: 30px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Open Sans ", sans-serif;
+    font-weight: 500;
+    background-color:  #8fce80;
+    color: #070707;
+    line-height: 1.7;
+}
+#course-title{
+    font-weight: 700;
+    font-size: larger;
+    background-color: var(--accent2-color);
+    display: flex;
+    justify-content: space-around;
+}
+header{
+    font-size: var(--space-large);
+    font-weight: 400;
+}
+h1{
+    font-size: var(--space-large);
+    font-weight: 500;
+    text-align: center;
+}
+nav{
+    background-color:var(--primary-color) ;
+    display: flex;
+    justify-content: space-around;
+    padding: var(--space-small);
+    flex-wrap: wrap;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+nav a:hover,.resources a:hover {
+    color: #ffd54f;
+}
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: var(--space-medium);
+}
+.content-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-large);
+}
+.card {
+    background-color: #52b879;
+    border: 1px solid #bbb;
+    border-radius:var(--space-small);
+    overflow: hidden;
+}
+.card-header {
+    background-color:var(--primary-color);
+    color: #ffd54f;
+    text-align: center;
+    padding: var(--space-medium);
+}
+.about-content, .country-content {
+    display: flex;
+    gap: var(--space-medium);
+    padding: var(--space-medium);
+}
+
+.profile-image img {
+    width: 250px;
+    height: auto;
+    border: 1px solid rgb(14, 58, 14);
+    box-shadow: 0 0 30px rgb(109, 179, 127);
+    border-radius: 4px;
+}
+.country-section {
+    padding: 0 1.5rem;
+    margin: var(--space-small);
+}
+.country-content {
+    display: flex;
+    width: 70%;
+}
+h3 {
+    text-align: center;
+    width: 60%;
+    font-size: 1.5rem;
+    border-bottom:1px solid  rgb(14, 58, 14);
+    font-weight: 300;
+}
+.country-content img {
+    margin: var(--space-small);
+    width: 170px;
+}
+
+.country-content figcaption {
+    font-size: var(--space-medium);
+    padding: var(--space-small);
+    font-style: italic;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+.resources ul {
+    padding: 2rem;
+    margin-left: 1rem;
+}
+
+footer {
+    background-color:var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 2rem;
+}
+
+
+
+
+
