@@ -34,14 +34,16 @@ h1{
     font-size: var(--space-large);
     font-weight: 500;
     text-align: center;
+    text-transform: uppercase;
 }
-nav{
+nav ul{
     background-color:var(--primary-color) ;
     display: flex;
     justify-content: space-around;
     padding: var(--space-small);
     flex-wrap: wrap;
     list-style: none;
+    color: white;
 }
 nav a{
     text-decoration: none;
