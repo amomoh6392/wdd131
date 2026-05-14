@@ -10,4 +10,6 @@ menuButton.addEventListener("click", () => {
 
     const isOpen = navigation.classList.contains("open");
     menuButton.setAttribute("aria-expanded", isOpen);
+
+    menuButton.textContent = isOpen ? "✖" : "☰";
 });
