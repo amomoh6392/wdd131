@@ -37,7 +37,7 @@ header h2 {
 #menu {
     display: block;
     background: none;
-    color: var(--background-color);
+    color: #fff;
     font-size: var(--space-medium);
     cursor: pointer;
     border: none;
