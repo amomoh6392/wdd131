@@ -16,7 +16,7 @@ body {
     font-size: large;
     font-weight: 500;
     background-color: var(--background-color);
-    color: var(--dark-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 header {
@@ -25,10 +25,10 @@ header {
     padding: var(--space-small);
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
-header title {
+header h1 {
     display: block;
     text-align: center;
     font-size: 2.5rem;
@@ -42,7 +42,7 @@ header title {
     cursor: pointer;
     border: none;
     position: absolute;
-    right: var(--space-medium);
+    right: var(--space-small);
 }
 #menu::before {
     content:"☰";
@@ -50,23 +50,23 @@ header title {
 #menu.open::before {
     content:"✖";
 }
-.navigation{
+nav {
     display: flex;
     flex-direction: column;
-    list-style: none;
     gap: var(--space-small);
 }
-.navigation li {
+nav li {
     display: none;
+    list-style: none;
 }
-.navigation a {
+nav a {
     text-align: center;
     font-weight: 800;
     color: white;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
-.navigation a:hover {
+nav a:hover {
     background-color: #5ddad354;
     padding: 0.3rem 0.5rem;
     border-radius: 5px;

@@ -2,13 +2,16 @@
     #menu{
         display: none;
     }
-    .navigation{
+    nav {
         flex-direction: row;
     }
-    .navigation li {
-        display: block;
-        justify-content:space-evenly;
-
+   
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-around;
+        
     }
     .temples{
         grid-template-columns: repeat(3, 1fr);
