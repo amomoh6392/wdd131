@@ -1,0 +1,17 @@
+@media screen and (min-width: 768px)  {
+    #menu{
+        display: none;
+    }
+    .navigation{
+        flex-direction: row;
+    }
+    .navigation li {
+        display: block;
+        justify-content:space-evenly;
+
+    }
+    .temples{
+        grid-template-columns: repeat(3, 1fr);
+    }
+   
+}

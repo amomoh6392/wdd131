@@ -1,0 +1,117 @@
+:root {
+    --header-color:#05504c;
+    --background-color: #689c61;
+    --text-color:#0f0404;
+    --space-small: 1rem;
+    --space-medium: 2rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  "Playfair Display", serif;
+    font-size: large;
+    font-weight: 500;
+    background-color: var(--background-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+header {
+    background-color:var(--header-color);
+    color: white;
+    padding: var(--space-small);
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header title {
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+#menu {
+    display: block;
+    background: none;
+    color: var(--background-color);
+    font-size: var(--space-medium);
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    right: var(--space-medium);
+}
+#menu::before {
+    content:"☰";
+}
+#menu.open::before {
+    content:"✖";
+}
+.navigation{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: var(--space-small);
+}
+.navigation li {
+    display: none;
+}
+.navigation a {
+    text-align: center;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.navigation a:hover {
+    background-color: #5ddad354;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+}
+.open li {
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-small);
+}
+main h1{
+    text-align: center;
+    margin-bottom: var(--space-small);
+}
+.temples {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-small);
+}
+figure {
+    background-color: #80e7e254;
+    padding: var(--space-small);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    border-radius: 8px;
+}
+figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--header-color);
+    color: white;
+    text-align: center;
+    padding: var(--space-small);
+    margin-top: var(--space-medium);
+}
