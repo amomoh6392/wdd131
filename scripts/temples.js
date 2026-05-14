@@ -4,7 +4,11 @@ document.getElementById("lastmodified").textContent = `Last Modified: ${document
 
 const menuButton = document.querySelector("#menu");
 const navigation = document.querySelector("nav");
+
+menuButton.textContent = "☰";
+    
 menuButton.addEventListener("click", () => {
+  
     navigation.classList.toggle("open");
     menuButton.classList.toggle("open");
 
