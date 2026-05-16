@@ -3,7 +3,7 @@
         display: none;
     }
     nav {
-        flex-direction: row;
+        width: auto;
     }
     nav li {
         display: block;
@@ -13,6 +13,7 @@
     nav ul {
         display: flex;
         flex-direction: row;
+        justify-content: row;
         gap: 2rem;
     }
     .temples{
