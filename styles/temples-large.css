@@ -13,7 +13,7 @@
     nav ul {
         display: flex;
         flex-direction: row;
-        justify-content: row;
+        justify-content:center;
         gap: 2rem;
     }
     .temples{
