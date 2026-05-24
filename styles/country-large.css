@@ -1,0 +1,28 @@
+@media screen and (min-width: 800px) {
+    main {
+        position: relative;
+    }
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+    .data {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        width: 300px;
+    }
+    .weather {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        width: 300px;
+    }
+    .weather-icon {
+        display: none;
+    }
+    .weather h2::after {
+        content: " ⛅";
+        font-size: 1.2rem;
+    }
+}

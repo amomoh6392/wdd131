@@ -1,0 +1,62 @@
+:root {
+    --primary-color: #2a5379;
+    --secondary-color: #ffffff;
+    --text-color: #222;
+    --card-bg: rgba(210, 231, 243, 0.9);
+    --space-small: 1rem;
+    --space-medium: 1.5rem;
+    --heading-font: "Playfair Display", serif;
+    --body-font: Verdana, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: #d5d8d869;
+    line-height: 1.6;
+}
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: var(--space-medium);
+}
+header h1 {
+    font-family: var(--heading-font);
+}
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card {
+    background-color: var(--card-bg);
+    margin: var(--space-small);
+    padding: var(--space-medium);
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+.card h2 {
+    text-align: center;
+    margin-bottom: var(--space-small);
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+}
+.info p {
+    margin: 0.5rem 0;
+}
+.weather-icon {
+    display: block;
+    margin: 0 auto var(--space-small);
+}
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--space-small);
+}

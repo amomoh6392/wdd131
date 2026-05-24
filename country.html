@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Place I Wish to Visit</title>
+    <meta name="description" content="The subject of the page is a  place where i  wish to visit..">
+    <meta name="author" content="Abinadi Momoh Oke">
+    <link rel="stylesheet" href="styles/country.css">
+    <link rel="stylesheet" href="styles/country-large.css" />
+    <script src="scripts/country.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Karlsruhe Institute of Technology</h1>
+    </header>
+    <main>
+        <picture class="hero">
+            <source srcset="images/kit-large.webp" media="(min-width: 800px)">
+            <img src="images/kit-small.webp" alt="Karlsruhe Institute of Technology campus in Germany" loading="lazy" width="800" height="500"/>
+        </picture>
+        
+        <section class="card data">
+            <h2>Data</h2>
+            <div class="info">
+                <p><strong>Country:</strong> Germany</p>
+                <p><strong>City:</strong> Karlsruhe</p>
+                <p><strong>Founded:</strong> 1825</p>
+                <p><strong>Type:</strong> Public Research University</p>
+                <p><strong>Students:</strong> 22,000+</p>
+                <p><strong>Language:</strong> German</p>
+            </div>
+        </section>
+
+        <section class="card weather">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="Weather Icon" class="weather-icon" width="60" height="60"/>
+            <div  class="info">
+                <p><strong>Temperature:</strong> <span id="temp">8</span>°C</p>
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> <span id="wind">12</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; ※<span id="currentyear"></span>※ ABINADI MOMOH OKE ※ NIGERIA ※</p>
+        <p id="lastmodified"></p>
+    </footer>
+</body>
+</html>
