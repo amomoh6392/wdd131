@@ -1,0 +1,118 @@
+:root {
+    --header-color:#05504c;
+    --background-color: #689c61;
+    --text-color:#0f0404;
+    --space-small: 1rem;
+    --space-medium: 2rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  "Playfair Display", serif;
+    font-size: large;
+    font-weight: 500;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+header {
+    background-color:var(--header-color);
+    color: white;
+    padding: var(--space-small);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header h2 {
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+#menu {
+    display: block;
+    background: none;
+    color: #fff;
+    font-size: var(--space-medium);
+    cursor: pointer;
+    border: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-small);
+}
+nav li {
+    display: none;
+}
+nav ul {
+    list-style: none;
+}
+nav a {
+    display: block;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+}
+.open li {
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-small);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+main h1{
+    text-align: center;
+    margin-bottom: var(--space-small);
+}
+#temple-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-small);
+}
+figure {
+    background-color: #80e7e254;
+    padding: var(--space-small);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: var(--space-small);
+    text-align: center;
+}
+figure img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 1rem auto 0;
+    box-shadow: 0 0 12px rgba(0,0,0,.3);
+}
+
+footer {
+    background-color: var(--header-color);
+    color: white;
+    text-align: center;
+    padding: var(--space-small);
+    margin-top: var(--space-medium);
+}

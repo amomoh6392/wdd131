@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Album for Temples</title>
+    <meta name="description" content="Design, develop, test, and deploy a temple album page replacing these figures with dynamically generated HTML using JavaScript.">
+    <meta name="author" content="Abinadi Momoh Oke">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h2>Temple Album</h2>
+        <button id="menu" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a id="home" href="#">Home</a></li>
+                <li><a id="old" href="#">Old</a></li>
+                <li><a id="new" href="#">New</a></li>
+                <li><a id="large" href="#">Large</a></li>
+                <li><a id="small" href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <section id="temple-container"></section>
+    </main>
+    <footer>
+        <p>&copy; ※<span id="currentyear"></span>※ ABINADI MOMOH OKE ※ NIGERIA ※</p>
+        <p id="lastmodified"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,142 @@
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+document.getElementById("lastmodified").textContent = `Last Modified: ${document.lastModified}`;
+
+const menuButton = document.querySelector("#menu");
+const navigation = document.querySelector("nav");
+
+menuButton.textContent = "☰";
+    
+menuButton.addEventListener("click", () => {
+  
+    navigation.classList.toggle("open");
+    menuButton.classList.toggle("open");
+
+    const isOpen = navigation.classList.contains("open");
+    menuButton.setAttribute("aria-expanded", isOpen);
+
+    menuButton.textContent = isOpen ? "✖" : "☰";
+});
+
+const temples = [
+  {
+    templeName: "Aba Nigeria",
+    location: "Aba, Nigeria",
+    dedicated: "2005-08-07",
+    area: 11500,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+  },
+  {
+    templeName: "Manti Utah",
+    location: "Manti, Utah, United States",
+    dedicated: "1888-05-21",
+    area: 74792,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+  },
+  {
+    templeName: "Payson Utah",
+    location: "Payson, Utah, United States",
+    dedicated: "2015-06-07",
+    area: 96630,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+  },
+  {
+    templeName: "Yigo Guam",
+    location: "Yigo, Guam",
+    dedicated: "2020-05-02",
+    area: 6861,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+  },
+  {
+    templeName: "Washington D.C.",
+    location: "Kensington, Maryland, United States",
+    dedicated: "1974-11-19",
+    area: 156558,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+  },
+  {
+    templeName: "Lima Perú",
+    location: "Lima, Perú",
+    dedicated: "1986-01-10",
+    area: 9600,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+  },
+  {
+    templeName: "Mexico City Mexico",
+    location: "Mexico City, Mexico",
+    dedicated: "1983-23-02",
+    area: 116642,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+  {
+    templeName: "Accra Ghana Temple",
+    location: "Accra Ghana, Ghana",
+    dedicated: "2004-01-11",
+    area: 17500,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/320x200/accra-ghana-temple-758797-wallpaper.jpg"
+    },
+  {
+    templeName: "Anchorage Alaska Temple",
+    location: "Anchorage Alaska, United States",
+    dedicated: "1999-01-09",
+    area: 235224,
+    imageUrl:"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/anchorage-alaska/320x200/anchorage-temple-lds-746769-wallpaper.jpg"
+  },
+  {
+    templeName: "Boise Idaho Temple",
+    location: "Boise Idaho, United States",
+    dedicated: "2012-11-18",
+    area: 210395,
+    imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/boise-idaho-temple/boise-idaho-temple-65241-main.jpg"
+  }
+];
+const container = document.querySelector("#temple-container");
+function displayTemples(list) {
+  container.innerHTML = "";
+
+  list.forEach(temple => {
+    const figure = document.createElement("figure");
+    
+    figure.innerHTML = `
+      <h3>${temple.templeName}</h3>
+      <p>Location: ${temple.location}</p>
+      <p>Dedicated: ${temple.dedicated}</p>
+      <p>Area: ${temple.area} sq ft</p>
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+    `;
+
+    container.appendChild(figure);
+  });
+}
+displayTemples(temples);
+
+document.querySelector("#home").addEventListener("click", () => {
+  displayTemples(temples);
+});
+
+document.querySelector("#old").addEventListener("click", () => {
+  const filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+  displayTemples(filtered);
+});
+
+document.querySelector("#new").addEventListener("click", () => {
+  const filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+  displayTemples(filtered);
+});
+
+document.querySelector("#large").addEventListener("click", () => {
+  const filtered = temples.filter(t => t.area > 90000);
+  displayTemples(filtered);
+});
+
+document.querySelector("#small").addEventListener("click", () => {
+  const filtered = temples.filter(t => t.area < 10000);
+  displayTemples(filtered);
+});
