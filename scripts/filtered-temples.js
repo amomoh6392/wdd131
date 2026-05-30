@@ -25,7 +25,7 @@ const temples = [
     dedicated: "2005-08-07",
     area: 11500,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/800x500/aba-nigeria-temple-lds-1636397-wallpaper.jpg"
   },
   {
     templeName: "Manti Utah",
@@ -70,7 +70,7 @@ const temples = [
   {
     templeName: "Mexico City Mexico",
     location: "Mexico City, Mexico",
-    dedicated: "1983-23-02",
+    dedicated: "1983-12-02",
     area: 116642,
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
@@ -94,7 +94,7 @@ const temples = [
     location: "Boise Idaho, United States",
     dedicated: "2012-11-18",
     area: 210395,
-    imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/boise-idaho-temple/boise-idaho-temple-65241-main.jpg"
+    imageUrl:"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/boise-idaho/2018/320x200/1-Boise-Idaho-Temple-1968984.jpg"
   }
 ];
 const container = document.querySelector("#temple-container");
@@ -106,10 +106,10 @@ function displayTemples(list) {
     
     figure.innerHTML = `
       <h3>${temple.templeName}</h3>
-      <p>Location: ${temple.location}</p>
-      <p>Dedicated: ${temple.dedicated}</p>
-      <p>Area: ${temple.area} sq ft</p>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+      <p><strong>Location:</strong> ${temple.location}</p>
+      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+      <p><strong>Area:</strong> ${temple.area} sq ft</p>
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy"width="400" height="250">
     `;
 
     container.appendChild(figure);
@@ -117,26 +117,31 @@ function displayTemples(list) {
 }
 displayTemples(temples);
 
-document.querySelector("#home").addEventListener("click", () => {
+document.querySelector("#home").addEventListener("click", (e) => {
+  e.preventDefault();
   displayTemples(temples);
 });
 
-document.querySelector("#old").addEventListener("click", () => {
+document.querySelector("#old").addEventListener("click", (e) => {
+  e.preventDefault();
   const filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
   displayTemples(filtered);
 });
 
-document.querySelector("#new").addEventListener("click", () => {
+document.querySelector("#new").addEventListener("click", (e) => {
+  e.preventDefault();
   const filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
   displayTemples(filtered);
 });
 
-document.querySelector("#large").addEventListener("click", () => {
+document.querySelector("#large").addEventListener("click", (e) => {
+  e.preventDefault();
   const filtered = temples.filter(t => t.area > 90000);
   displayTemples(filtered);
 });
 
-document.querySelector("#small").addEventListener("click", () => {
+document.querySelector("#small").addEventListener("click", (e) => {
+  e.preventDefault();
   const filtered = temples.filter(t => t.area < 10000);
   displayTemples(filtered);
 });
