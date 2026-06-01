@@ -1,0 +1,39 @@
+:root {
+    --text-color: #041935;
+    --background-color: #EEF4FA;
+    --secondary-color: #5e7fa0;
+    --primary-color: #1E3A5F;
+    --accent-color: #FFCC00; 
+    
+
+}
+body {
+    background-color: var(--background-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+h1, h2, h3, footer {
+    color: var(--text-color);
+    font-family: "Playfair Display", serif;
+    text-align: center;
+}
+
+section{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 1rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.grid h2{
+    grid-column: 1/-1;
+}
