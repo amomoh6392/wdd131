@@ -17,7 +17,7 @@ body {
     font-weight: 500;
     background-color: var(--background-color);
     color: var(--text-color);
-    line-height: var(--space-small);
+    line-height: 1.5rem;
 }
 header {
     background-color:var(--header-color);
@@ -55,7 +55,7 @@ nav li {
     text-align: center;
 }
 
-nav button {
+nav a {
     background: none;
     border: none;
     color: white;
@@ -63,12 +63,12 @@ nav button {
     cursor: pointer;
     padding: 0.75rem;
 }
-nav button:hover {
+nav a:hover {
     background-color: rgba(255,255,255,0.2);
     padding: 0.3rem 0.5rem;
     border-radius: 5px;
 }
-nav button:focus,
+nav a:focus,
 #menu:focus {
     outline: 2px solid white;
     outline-offset: 2px;
