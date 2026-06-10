@@ -1,0 +1,12 @@
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 900px;
+        padding: 2rem;
+    }
+
+    .submit-btn {
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
