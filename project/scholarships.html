@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships & Contact | Study in Germany</title>
+    <meta name="description" content="Scholarship opportunities and contact form for prospective students.">
+    <meta name="author" content="Abinadi Momoh Oke">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project-large.css">
+    <script src="scripts/scholarships.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Study in Germany</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="universities.html">Universities</a></li>
+                <li><a href="scholarships.html">Scholarships & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Scholarship Opportunities</h2>
+
+        <section>
+            <h3>Popular Scholarships</h3>
+
+            <article>
+                <h4>DAAD Scholarship</h4>
+                <p>Supports international students pursuing undergraduate, master's, and doctoral studies in Germany.</p>
+            </article>
+
+            <article>
+                <h4>Erasmus+</h4>
+                <p>Provides funding for international study and exchange opportunities across Europe.</p>
+            </article>
+
+            <article>
+                <h4>Deutschlandstipendium</h4>
+                <p>Merit-based funding program supporting talented students at German universities.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+
+                <div>
+                    <label for="interest"> Scholarship Interest</label>
+                    <select id="interest" name="interest" required>
+                        <option value="" selected disabled>Select One</option>
+                        <option value="daad">DAAD</option>
+                        <option value="erasmus">Erasmus+</option>
+                        <option value="deutschlandstipendium"> Deutschlandstipendium</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message">Questions or Comments</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Whats on your mind?."></textarea>
+                </div>
+
+                <button type="submit">Submit Inquiry</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Abinadi Momoh Oke</p>
+        <a href="references.html">References</a>
+    </footer>
+</body>
+</html>

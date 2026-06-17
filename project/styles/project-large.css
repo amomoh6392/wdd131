@@ -1,0 +1,13 @@
+@media screen and (min-width: 768px) {
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #university-container,
+    #universities-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
